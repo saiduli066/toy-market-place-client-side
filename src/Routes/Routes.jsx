@@ -1,11 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../Notfound/NotFound";
+import Main from "../shared/Main";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Main />,
+    //     children: [
+        
+    // ]
     },
     {
         path: '/*',
