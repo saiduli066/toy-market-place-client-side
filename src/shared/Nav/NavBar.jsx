@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa'
 const NavBar = () => {
 
 
   return (
-     <div className="navbar bg-base-100">
+    <div className="navbar bg-black text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -65,9 +64,11 @@ const NavBar = () => {
         <img
           src="https://i.pinimg.com/originals/b4/6f/79/b46f79268ff1721cadcd7ddbcd71291d.jpg"
           alt="logo"
-          className="w-10 h-10 rounded-full"
+          className="object-cover w-10 h-10 rounded-full"
         />
-        <Link className="btn btn-ghost normal-case text-xl">GermGear</Link>
+        <Link className="btn btn-ghost normal-case text-xl md:text-3xl lg:text-4xl font-[500] md:font-[700] lg:font-[700]">
+          GermGear
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
