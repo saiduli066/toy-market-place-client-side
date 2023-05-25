@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa'
+import logo from '../../assets/images/logo-modified.png'
 const NavBar = () => {
 
 
   return (
-    <div className="navbar bg-black text-white">
+    <div className="navbar  text-gray-600">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,31 +29,31 @@ const NavBar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to="/" className="">
+              <Link to="/" className="text-black font-[300] hover:text-blue-600">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="/all-toys" className="">
+              <Link to="/all-toys" className="text-black font-[300] hover:text-blue-600">
                 All Toys
               </Link>
             </li>
 
             <li>
-              <Link to="/my-toys" className="">
+              <Link to="/my-toys" className="text-black font-[300] hover:text-blue-600">
                 My Toys
               </Link>
             </li>
 
             <li>
-              <Link to="/add-a-toy" className="">
+              <Link to="/add-a-toy" className="text-black font-[300] hover:text-blue-600">
                 Add A Toy
               </Link>
             </li>
 
             <li>
-              <Link to="/blogs" className="">
+              <Link to="/blogs" className="text-black  font-[300] hover:text-blue-600">
                 Blogs
               </Link>
             </li>
@@ -62,7 +63,7 @@ const NavBar = () => {
           </ul>
         </div>
         <img
-          src="https://i.pinimg.com/originals/b4/6f/79/b46f79268ff1721cadcd7ddbcd71291d.jpg"
+          src={logo}
           alt="logo"
           className="object-cover w-10 h-10 rounded-full"
         />
@@ -73,31 +74,31 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/" className="">
+            <Link to="/" className="text-black  font-[300] hover:text-blue-600">
               Home
             </Link>
           </li>
 
           <li>
-            <Link to="/all-toys" className="">
+            <Link to="/all-toys" className="text-black  font-[300] hover:text-blue-600">
               All Toys
             </Link>
           </li>
 
           <li>
-            <Link to="/my-toys" className="">
+            <Link to="/my-toys" className="text-black  font-[300] hover:text-blue-600">
               My Toys
             </Link>
           </li>
 
           <li>
-            <Link to="/add-a-toy" className="">
+            <Link to="/add-a-toy" className="text-black  font-[300] hover:text-blue-600">
               Add A Toy
             </Link>
           </li>
 
           <li>
-            <Link to="/blogs" className="">
+            <Link to="/blogs" className="text-black  font-[300] hover:text-blue-600">
               Blogs
             </Link>
           </li>
@@ -107,7 +108,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login" className="btn btn-success">
+        <Link to="/login" className="btn text-white btn-success">
           log in
         </Link>
       </div>
