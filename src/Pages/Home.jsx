@@ -23,7 +23,7 @@ const Home = () => {
               <input
                 type="text"
                 placeholder="Name"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered input-info w-full max-w-xs"
               />
             </div>
             <div>
@@ -33,7 +33,7 @@ const Home = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered input-info w-full max-w-xs"
               />
             </div>
           </div>
@@ -41,7 +41,7 @@ const Home = () => {
             <input
               type="text"
               placeholder="Your message"
-              className="input input-lg input-bordered input-primary w-full max-w-md"
+              className="input input-lg input-bordered input-info w-full max-w-md"
             />
           </div>
         </div>
