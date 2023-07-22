@@ -10,16 +10,16 @@ const AddAToy = () => {
   const onSubmit = (data) => {
     const toyData = { ...data, email: user?.email, status: false };
     console.log(toyData);
-    axios.post("http://localhost:5000/addToy", toyData).then((result) => {
-      console.log(result.data);
-       Swal.fire({
-         icon: "success",
-         title: "Toy added successfully!",
-         showConfirmButton: false,
-         timer: 1500,
-       });
+    axios.post("http://localhost:5000/addToys", toyData).then((result) => {
+    //   console.log(result.data);
+      Swal.fire({
+        icon: "success",
+        title: "Toy added successfully!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
 
-       reset();
+      reset();
     });
   };
 
@@ -94,6 +94,16 @@ const AddAToy = () => {
                 className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm outline-none border border-gray-400"
                 {...register("price")}
                 placeholder="Price"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="">Available quantity</label>
+            <div className="relative">
+              <input
+                className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm outline-none border border-gray-400"
+                {...register("availableQuantity")}
+                placeholder="Available quantity"
               />
             </div>
           </div>

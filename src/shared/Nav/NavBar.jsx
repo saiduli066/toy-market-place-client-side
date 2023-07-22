@@ -57,7 +57,7 @@ const NavBar = () => {
 
             <li>
               <Link
-                to="/add-a-toy"
+                to="/add-toys"
                 className="text-black font-[300] hover:text-blue-600"
               >
                 Add A Toy
