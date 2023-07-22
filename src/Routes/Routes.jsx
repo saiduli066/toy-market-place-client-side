@@ -6,6 +6,9 @@ import Blog from "../Pages/Blog";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Authprovider from "../providers/Authprovider";
+import AllToy from "../Pages/AllToy";
+import AddAToy from "../Pages/AddAToy";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -32,6 +35,22 @@ const router = createBrowserRouter([
           <Authprovider>
             <Register />
           </Authprovider>
+        ),
+      },
+      {
+        path: "/all-toys",
+        element: <AllToy />,
+      },
+      {
+        path: "/my-toys",
+        // element: <Blog />,
+      },
+      {
+        path: "/add-toys",
+        element: (
+          <PrivateRoute>
+              <AddAToy />
+          </PrivateRoute>
         ),
       },
       {

@@ -29,31 +29,46 @@ const NavBar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to="/" className="text-black font-[300] hover:text-blue-600">
+              <Link
+                to="/"
+                className="text-black font-[300] hover:text-blue-600"
+              >
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="/all-toys" className="text-black font-[300] hover:text-blue-600">
+              <Link
+                to="/all-toys"
+                className="text-black font-[300] hover:text-blue-600"
+              >
                 All Toys
               </Link>
             </li>
 
             <li>
-              <Link to="/my-toys" className="text-black font-[300] hover:text-blue-600">
+              <Link
+                to="/my-toys"
+                className="text-black font-[300] hover:text-blue-600"
+              >
                 My Toys
               </Link>
             </li>
 
             <li>
-              <Link to="/add-a-toy" className="text-black font-[300] hover:text-blue-600">
+              <Link
+                to="/add-a-toy"
+                className="text-black font-[300] hover:text-blue-600"
+              >
                 Add A Toy
               </Link>
             </li>
 
             <li>
-              <Link to="/blogs" className="text-black  font-[300] hover:text-blue-600">
+              <Link
+                to="/blogs"
+                className="text-black  font-[300] hover:text-blue-600"
+              >
                 Blogs
               </Link>
             </li>
@@ -80,25 +95,37 @@ const NavBar = () => {
           </li>
 
           <li>
-            <Link to="/all-toys" className="text-black  font-[300] hover:text-blue-600">
+            <Link
+              to="/all-toys"
+              className="text-black  font-[300] hover:text-blue-600"
+            >
               All Toys
             </Link>
           </li>
 
           <li>
-            <Link to="/my-toys" className="text-black  font-[300] hover:text-blue-600">
+            <Link
+              to="/my-toys"
+              className="text-black  font-[300] hover:text-blue-600"
+            >
               My Toys
             </Link>
           </li>
 
           <li>
-            <Link to="/add-a-toy" className="text-black  font-[300] hover:text-blue-600">
+            <Link
+              to="/add-toys"
+              className="text-black  font-[300] hover:text-blue-600"
+            >
               Add A Toy
             </Link>
           </li>
 
           <li>
-            <Link to="/blogs" className="text-black  font-[300] hover:text-blue-600">
+            <Link
+              to="/blogs"
+              className="text-black  font-[300] hover:text-blue-600"
+            >
               Blogs
             </Link>
           </li>
