@@ -23,7 +23,7 @@ const Home = () => {
         {/* .........2 */}
 
         <h2 className="text-xl md:text-4xl font-[700] text-sky-500 text-center">
-          Tell what you thing!
+          Tell us what you thing!
         </h2>
         <form className="w-[70%] mx-auto my-5 md:my-10">
           <div className="flex flex-col md:flex-row justify-center gap-1 md:gap-4 mb-3 md:mb-4">

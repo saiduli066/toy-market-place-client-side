@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa'
-import logo from '../../assets/images/logo-modified.png'
+import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import logo from "../../assets/images/logo-modified.png";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/Authprovider";
 const NavBar = () => {
-
+  const { user, logOut } = useContext(AuthContext);
 
   return (
     <div className="navbar  text-gray-600">
@@ -135,14 +137,23 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login" className="btn text-white btn-success">
-          log in
-        </Link>
+        {user ? (
+          <button
+            onClick={() => {
+              logOut();
+            }}
+            className="btn text-white btn-warning"
+          >
+            LogOut
+          </button>
+        ) : (
+          <Link to="/login" className="btn text-white btn-success">
+            log in
+          </Link>
+        )}
       </div>
     </div>
   );
 };
 
 export default NavBar;
-
-

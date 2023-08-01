@@ -9,6 +9,7 @@ import Authprovider from "../providers/Authprovider";
 import AllToy from "../Pages/AllToy";
 import AddAToy from "../Pages/AddAToy";
 import PrivateRoute from "./PrivateRoute";
+import ToyDetails from "../Pages/ToyDetails";
 
 
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         element: <AllToy />,
       },
       {
+        path: "/view-details",
+        element: <ToyDetails />,
+      },
+      {
         path: "/my-toys",
         // element: <Blog />,
       },
@@ -49,7 +54,15 @@ const router = createBrowserRouter([
         path: "/add-toys",
         element: (
           <PrivateRoute>
-              <AddAToy />
+            <AddAToy />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/view-details/:toyId",
+        element: (
+          <PrivateRoute>
+            <ToyDetails />
           </PrivateRoute>
         ),
       },
