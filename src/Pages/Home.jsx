@@ -2,7 +2,8 @@
 import React from 'react';
 import Banner from './Banner';
 import NewArrivals from './NewArrivals';
-import Tabs from './Tabs';
+import ToyTabs from './ToyTabs';
+
 
 const Home = () => {
   
@@ -10,7 +11,7 @@ const Home = () => {
       <div>
         <Banner />
         <NewArrivals />
-        
+        <ToyTabs/>
 
 
 
