@@ -23,32 +23,32 @@ const ToyTabs = () => {
 
   return (
     <Tabs>
-      <TabList className="w-[50%] mx-auto flex">
-        <Tab className="w-[33%] mx-auto border-2 border-sky-700 text-lg font-bold text-white bg-sky-400  p-2 rounded">
+      <TabList className="lg:w-[50%]  mx-2 lg:mx-auto flex">
+        <Tab className="w-[33%] mx-auto border-2 border-orange-400 text-lg font-bold text-white bg-sky-400  p-2 rounded">
           Taxi
         </Tab>
-        <Tab className="w-[33%] mx-auto border-2 border-sky-700 text-lg font-bold text-white bg-sky-400  p-2 rounded">
+        <Tab className="w-[33%] mx-auto border-2 border-orange-400 text-lg font-bold text-white bg-sky-400  p-2 rounded">
           Jeep
         </Tab>
-        <Tab className="w-[33%] mx-auto border-2 border-sky-700 text-lg font-bold text-white bg-sky-400 p-2 rounded">
+        <Tab className="w-[33%] mx-auto border-2 border-orange-400 text-lg font-bold text-white bg-sky-400 p-2 rounded">
           Convertible
         </Tab>
       </TabList>
 
       <TabPanel className="my-6 lg:my-10">
-        <div className="flex lg:flex-row justify-center  gap-4 mx-auto w-[90%]">
+        <div className="flex flex-col flex-col lg:flex-row justify-center  gap-4 mx-auto w-[90%]">
           {toyData["Taxi"]?.map((toy) => (
             <div key={toy._id}>
-              {/* <h2>{toy.toyName}</h2>
-            <img className="" src={toy.image} alt="" />{" "} */}
-              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+              <div className="card card-compact lg:w-96 bg-base-100 shadow-xl">
                 <figure>
                   <img src={toy.image} alt="" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{toy.toyName}</h2>
                   <p className="font-normal">{toy.price}</p>
-                  <p className="font-normal">Available Quantity:{toy.availableQuantity}</p>
+                  <p className="font-normal">
+                    Available Quantity:{toy.availableQuantity}
+                  </p>
                 </div>
               </div>
             </div>
@@ -56,19 +56,19 @@ const ToyTabs = () => {
         </div>
       </TabPanel>
       <TabPanel className="my-6 lg:my-10">
-        <div className="flex lg:flex-row justify-center  gap-4 mx-auto w-[90%]">
+        <div className="flex flex-col lg:flex-row justify-center  gap-4 mx-auto w-[90%]">
           {toyData["Jeep"]?.map((toy) => (
             <div key={toy._id}>
-              {/* <h2>{toy.toyName}</h2>
-            <img className="" src={toy.image} alt="" />{" "} */}
-              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+              <div className="card card-compact lg:w-96 bg-base-100 shadow-xl">
                 <figure>
                   <img src={toy.image} alt="" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{toy.toyName}</h2>
                   <p className="font-normal">{toy.price}</p>
-                  <p className="font-normal">Available Quantity:{toy.availableQuantity}</p>
+                  <p className="font-normal">
+                    Available Quantity:{toy.availableQuantity}
+                  </p>
                 </div>
               </div>
             </div>
@@ -76,19 +76,19 @@ const ToyTabs = () => {
         </div>
       </TabPanel>
       <TabPanel className="my-6 lg:my-10">
-        <div className="flex lg:flex-row justify-center  gap-4 mx-auto w-[90%]">
+        <div className="flex flex-col  lg:flex-row justify-center  gap-4 mx-auto w-[90%]">
           {toyData["Convertible"]?.map((toy) => (
             <div key={toy._id}>
-              {/* <h2>{toy.toyName}</h2>
-            <img className="" src={toy.image} alt="" />{" "} */}
-              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+              <div className="card card-compact lg:w-96 bg-base-100 shadow-xl">
                 <figure>
-                  <img src={toy.image} alt="" />
+                  <img className="" src={toy.image} alt="" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{toy.toyName}</h2>
                   <p className="font-normal">{toy.price}</p>
-                  <p className="font-normal">Available Quantity:{toy.availableQuantity}</p>
+                  <p className="font-normal">
+                    Available Quantity:{toy.availableQuantity}
+                  </p>
                 </div>
               </div>
             </div>
