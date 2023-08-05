@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/Authprovider";
 import Swal from "sweetalert2";
+import UpdateToy from "./UpdateToy";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -19,29 +20,20 @@ const MyToys = () => {
       });
   }, [user.email]);
 
+    
+    // update action
+
+      const [selectedToy, setSelectedToy] = useState(null);
+
+    
+      const handleUpdate = (toy) => {
+        setSelectedToy(toy);
+        
+      };
+
 
     // delete action
 
-//     const handleDelete = (id) => {
-//         Swal.fire({
-//   title: 'Are you sure?',
-//   text: "You won't be able to revert this!",
-//   icon: 'warning',
-//   showCancelButton: true,
-//   confirmButtonColor: '#3085d6',
-//   cancelButtonColor: '#d33',
-//   confirmButtonText: 'Yes, delete it!'
-//         }).then((result) => {
-       
-//   if (result.isConfirmed) {
-//     Swal.fire(
-//       'Deleted!',
-//       'Your file has been deleted.',
-//       'success'
-//     )
-//   }
-// })
-//     }
 
     const handleDelete = (id) => {
     console.log(id);
@@ -56,7 +48,7 @@ const MyToys = () => {
     }).then((result) => {
         if (result.isConfirmed) {
             const url = `https://toy-marketplace-server-side-beryl.vercel.app/my-toys/${id}`;
-            console.log(url);
+            // console.log(url);
             axios.delete(url)
                 .then(response => {
                     console.log(response);
@@ -118,10 +110,17 @@ const MyToys = () => {
               <td className="font-[500]">${myToy.price}</td>
               <td className="font-[500]">{myToy.availableQuantity}</td>
               <td>
-                <button onClick="" className="btn btn-info mr-3">
-                  Update
+                <button
+                  onClick={() => handleUpdate(myToy)}
+                  className="btn btn-info mr-3"
+                >
+                  Edit
                 </button>
-                <button onClick={()=>handleDelete(myToy._id)} className="btn btn-warning ">
+           
+                <button
+                  onClick={() => handleDelete(myToy._id)}
+                  className="btn btn-warning "
+                >
                   Delete
                 </button>
               </td>
@@ -129,6 +128,10 @@ const MyToys = () => {
           ))}
         </tbody>
       </table>
+
+      {selectedToy && (
+        <UpdateToy myToy={selectedToy} setSelectedToy={setSelectedToy} />
+      )}
     </div>
   );
 };
